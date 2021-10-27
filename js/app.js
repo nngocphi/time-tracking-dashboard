@@ -11,7 +11,7 @@ periodItems.forEach((element) => {
 
 // 2. Get JSON Data & Create category cards
 let data = {};
-fetch('/js/data.json')
+fetch('js/data.json')
 	.then((response) => response.json())
 	.then((jsonData) => {
 		jsonData.forEach((element) => {
