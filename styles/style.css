@@ -1,0 +1,280 @@
+:root {
+	--blue: hsl(246, 80%, 60%);
+	--work: hsl(15, 100%, 70%);
+	--play: hsl(195, 74%, 62%);
+	--study: hsl(348, 100%, 68%);
+	--exercise: hsl(145, 58%, 55%);
+	--social: hsl(264, 64%, 52%);
+	--self-care: hsl(43, 84%, 65%);
+
+	--very-dark-blue: hsl(226, 43%, 10%);
+	--dark-blue: hsl(235, 46%, 20%);
+	--desaturated-blue: hsl(235, 45%, 61%);
+	--pale-blue: hsl(236, 100%, 87%);
+	--card-hover: hsl(236, 41%, 34%);
+}
+
+html {
+	box-sizing: border-box;
+	font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Rubik', sans-serif;
+	background-color: var(--very-dark-blue);
+}
+
+h1,
+h2,
+h3 {
+	margin: 0;
+}
+
+.dashboard {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 2.2rem;
+	width: 90%;
+	margin: 2rem auto;
+}
+
+.main {
+	grid-area: main;
+	width: 100%;
+	background-color: var(--dark-blue);
+	border-radius: 1.6rem;
+}
+
+.main__profile {
+	display: flex;
+	align-items: center;
+	gap: 1.8rem;
+	padding: 3rem;
+	background-color: var(--blue);
+	border-radius: 15px;
+}
+
+.main__avt {
+	width: 26%;
+	border: 3px solid white;
+	border-radius: 50%;
+}
+
+.main__name-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 0.4rem;
+}
+
+.main__label {
+	font-size: 1.5rem;
+	color: var(--pale-blue);
+}
+
+.main__name {
+	font-size: 2.4rem;
+	font-weight: 300;
+	color: white;
+}
+
+.main__period-list {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin: 0;
+	padding: 2.5rem;
+	list-style: none;
+}
+
+.main__period-item {
+	font-size: 1.8rem;
+	color: var(--desaturated-blue);
+	cursor: pointer;
+}
+
+.main__period-item.active {
+	color: white;
+}
+
+.main__period-item:hover {
+	color: white;
+}
+
+.category {
+	width: 100%;
+	background-repeat: no-repeat;
+	background-position: 92% -6%;
+	border-radius: 1.6rem;
+}
+
+.category__info {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 0.8rem;
+	margin-top: 4rem;
+	padding: 2.5rem;
+	color: #fff;
+	background-color: var(--dark-blue);
+	border-radius: 1.6rem;
+	cursor: pointer;
+}
+
+.category__info:hover {
+	background-color: var(--card-hover);
+}
+
+.category__top {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+}
+
+.category__title {
+	font-size: 1.8rem;
+	font-weight: 500;
+}
+
+.category__menu:hover svg path {
+	fill: white;
+}
+
+.category__time {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+}
+
+.current-hour {
+	font-size: 3rem;
+	font-weight: 300;
+}
+
+.previous-hour {
+	margin-top: 0.8rem;
+	color: var(--pale-blue);
+	font-size: 1.5rem;
+}
+
+.work {
+	grid-area: work;
+	background-color: var(--work);
+	background-image: url(../images/icon-work.svg);
+}
+.play {
+	grid-area: play;
+	background-color: var(--play);
+	background-image: url(../images/icon-play.svg);
+}
+.study {
+	grid-area: study;
+	background-color: var(--study);
+	background-image: url(../images/icon-study.svg);
+}
+.exercise {
+	grid-area: exercise;
+	background-color: var(--exercise);
+	background-image: url(../images/icon-exercise.svg);
+}
+.social {
+	grid-area: social;
+	background-color: var(--social);
+	background-image: url(../images/icon-social.svg);
+}
+.self-care {
+	grid-area: self-care;
+	background-color: var(--self-care);
+	background-image: url(../images/icon-self-care.svg);
+}
+
+.attribution {
+	margin: 2.2rem 0;
+	font-size: 1.2rem;
+	color: white;
+	text-align: center;
+}
+
+.attribution a {
+	color: var(--pale-blue);
+}
+
+.attribution a:hover {
+	text-decoration: none;
+}
+
+.attribution a:focus {
+	outline: none;
+}
+
+@media screen and (min-width: 1440px) {
+	body {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		height: 100vh;
+	}
+	.dashboard {
+		display: grid;
+		gap: 3rem;
+		grid-template-columns: repeat(4, 1fr);
+		grid-template-areas:
+			'main work play study'
+			'main exercise social self-care';
+		max-width: 1200px;
+		margin: 0;
+	}
+	.main {
+		height: 100%;
+	}
+	.main__profile {
+		flex-direction: column;
+		align-items: start;
+		padding: 3.5rem 3rem;
+		height: 70%;
+	}
+	.main__avt {
+		width: 42%;
+	}
+	.main__name-container {
+		margin-top: 1rem;
+	}
+	.main__name {
+		font-size: 4rem;
+	}
+	.main__period-list {
+		flex-direction: column;
+		align-items: start;
+		height: 30%;
+		padding-left: 3rem;
+	}
+	.category__info {
+		margin-top: 4.5rem;
+		padding: 2.8rem;
+	}
+	.category__time {
+		flex-direction: column;
+		align-items: start;
+	}
+	.current-hour {
+		padding-top: 1.8rem;
+		font-size: 5.5rem;
+	}
+	.attribution {
+		margin: 3rem 0;
+		font-size: 1.4rem;
+	}
+}
