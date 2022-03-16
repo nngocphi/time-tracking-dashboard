@@ -34,8 +34,8 @@ The text for the previous period's time should change based on the active timefr
 
 ### Links
 
--   Solution URL: (https://github.com/nngocphi/time-tracking-dashboard-main)
--   Live Site URL: (https://nngocphi.github.io/time-tracking-dashboard-main/)
+-   Solution URL: (https://github.com/nngocphi/time-tracking-dashboard)
+-   Live Site URL: (https://nngocphi.github.io/time-tracking-dashboard/)
 
 ## My process
 
